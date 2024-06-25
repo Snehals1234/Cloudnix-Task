@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudnix Onboarding Wizard - Step 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container mt-5">
+    <div class="stepwizard">
+        <div class="stepwizard-row setup-panel">
+            <div class="stepwizard-step col-xs-4"> 
+                <a href="step1.html" type="button" class="btn btn-default btn-circle">1</a>
+                <p><small>Select Theme</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-4"> 
+                <a href="step2.html" type="button" class="btn btn-default btn-circle">2</a>
+                <p><small>Add Product Type & Category</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-4"> 
+                <a href="#" type="button" class="btn btn-primary btn-circle">3</a>
+                <p><small>Pricing</small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <form id="form-step-3">
+                <h3>Pricing</h3>
+                <div class="pricing-details" style="max-height: 300px; overflow-y: auto; padding-right: 20px;">
+                    <div class="form-group">
+                        <label class="control-label">Product Name</label>
+                        <input maxlength="100" type="text" required="required" class="form-control" id="product-name" placeholder="Enter Product Name" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Product Description</label>
+                        <textarea class="form-control" rows="3" id="product-description" placeholder="Enter Product Description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Add Image</label>
+                        <input type="file" class="form-control" id="product-image" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Net Price</label>
+                        <input maxlength="100" type="text" required="required" class="form-control" id="net-price" placeholder="Enter Net Price" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">List Price</label>
+                        <input maxlength="100" type="text" required="required" class="form-control" id="list-price" placeholder="Enter List Price" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Discount Price</label>
+                        <input maxlength="100" type="text" required="required" class="form-control" id="discount-price" placeholder="Enter Discount Price" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Shipping Charges</label>
+                        <input maxlength="100" type="text" required="required" class="form-control" id="shipping-charges" placeholder="Enter Shipping Charges" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Stock Level</label>
+                        <input maxlength="100" type="text" required="required" class="form-control" id="stock-level" placeholder="Enter Stock Level" />
+                    </div>
+                </div>
+                <button class="btn btn-success btn-lg pull-right" type="button" onclick="displayPricingDetails()">Finish</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h3>Pricing Details</h3>
+            <div id="pricing-output" style="border: 1px solid #ccc; padding: 15px;">
+                <!-- Pricing details will be displayed here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
